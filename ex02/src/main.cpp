@@ -6,7 +6,7 @@
 /*   By: didimitr <didimitr@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/11 16:07:33 by didimitr          #+#    #+#             */
-/*   Updated: 2026/03/16 23:00:49 by didimitr         ###   ########.fr       */
+/*   Updated: 2026/04/20 16:31:01 by didimitr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,8 @@ int main()
         std::cout << "OK: deep copy in operator=" << std::endl;
 
     printHeader("Self-assignment");
-    numbers = numbers;
+    Array<int>& ref = numbers;
+    numbers = ref;
     std::cout << "Self-assignment survived." << std::endl;
 
     printHeader("Out of bounds");
